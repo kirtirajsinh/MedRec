@@ -20,7 +20,7 @@ export const AddFile = () => {
     ]
     // const newfiles = files.map(file => file.name.replace(/\s/g, "_"));
     console.log(newFiles);
-      const token = process.env.Token
+      const token = process.env.REACT_APP_TOKEN;
       const storage = new Web3Storage({ token })
       const cid = await storage.put(newFiles)
       console.log(cid);
